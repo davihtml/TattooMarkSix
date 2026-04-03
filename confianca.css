@@ -1,0 +1,113 @@
+.Confianca {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(img/bg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: clamp(20px, 5vw, 60px);
+}
+
+/* CONTAINER CENTRAL */
+.CConteinerAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* LOGO */
+.ImgTattooDIv {
+    width: clamp(30px, 5vw, 40px);
+}
+
+/* TITULO */
+.DivTitleC h1 {
+    color: var(--vermelho);
+    font-family: "Anton SC", sans-serif;
+    font-size: clamp(2rem, 5vw, 60px);
+}
+
+/* TEXTO */
+.DivTitleC p {
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-style: italic;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    max-width: 600px;
+    width: 100%;
+    margin-inline: auto; /* 🔥 centraliza sem hack */
+}
+
+/* ========================= */
+/* GRID DE IMAGENS */
+/* ========================= */
+.ImgsDivC {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* 🔥 responsivo real */
+    gap: 15px;
+
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid var(--vermelho);
+    border-radius: 20px;
+}
+
+/* IMAGENS */
+.ImgsDivC img {
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+
+    transition: all 0.3s ease;
+}
+
+.ImgsDivC img:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 1024px) {
+    .ImgsDivC {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+    .DivTitleC p {
+        font-size: 14px;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE PEQUENO */
+/* ========================= */
+@media (max-width: 480px) {
+    .DivTitleC h1 {
+        font-size: 1.6rem;
+    }
+
+    .ImgsDivC {
+        gap: 10px;
+    }
+}

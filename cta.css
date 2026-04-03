@@ -1,0 +1,160 @@
+.CTA {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(img/bg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 🔥 essencial */
+
+    padding: clamp(20px, 5vw, 80px);
+    gap: 60px;
+}
+
+/* LADO ESQUERDO */
+.ctaleftdiv {
+    flex: 1 1 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo3d {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* LADO DIREITO */
+.ctarightdiv {
+    flex: 1 1 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TITULO */
+.ctarightdiv h1 {
+    color: var(--vermelho);
+    font-family: "Anton SC", sans-serif;
+    font-size: clamp(2rem, 5vw, 60px);
+    line-height: 1.1;
+}
+
+/* SUB */
+.ctarightdiv h3 {
+    color: var(--vermelho);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-size: clamp(16px, 2.5vw, 26px);
+
+    padding: 15px;
+    text-align: center;
+
+    border: 1px solid var(--vermelho);
+    border-radius: 10px;
+    background-color: black;
+
+    width: 100%;
+    max-width: 500px;
+}
+
+/* BOTÃO */
+.card {
+    color: var(--vermelho);
+    background: black;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 20px);
+
+    padding: 15px;
+    text-align: center;
+
+    border: 1px solid var(--vermelho);
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    width: 100%;
+    max-width: 280px; /* 🔥 ao invés de width fixo */
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* CONTATO */
+.contato {
+    margin-top: 10px;
+
+    display: flex; /* 🔥 quebra corretamente */
+    gap: 10px;
+
+    justify-content: center;
+    max-width: 500px;
+}
+
+.contato p {
+    color: white;
+    font-size: 14px;
+}
+
+/* SPAN */
+.ctarightdiv span {
+    color: white;
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 1024px) {
+    .CTA {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ctarightdiv {
+        align-items: center;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+    .CTA {
+        gap: 40px;
+    }
+
+    .logo3d {
+        max-width: 300px;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE PEQUENO */
+/* ========================= */
+@media (max-width: 480px) {
+    .ctarightdiv h1 {
+        font-size: 1.6rem;
+    }
+
+    .ctarightdiv h3 {
+        font-size: 15px;
+    }
+}
+
+/* FOOTER */
+.direitos {
+    color: white;
+    font-family: "Nunito Sans", sans-serif; /* 🔥 corrigido */
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+}

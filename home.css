@@ -1,0 +1,54 @@
+#Home{
+    position: relative;
+    top: 0;
+}
+
+
+
+.HomeDiv{
+    background-image: var(--background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.ConteinerHomeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: 1;
+    transition: opacity 0.1s linear;
+}
+
+.NameLogoHome{
+    height: 150px;
+}
+
+.LogoHome{
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    .NameLogoHome{
+        height: 100px;
+    }
+    .LogoHome{
+        height: 200px;
+    }
+}
+
+#ConteinerHomeDiv {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#ConteinerHomeDiv.fade-out {
+  opacity: 0;
+}

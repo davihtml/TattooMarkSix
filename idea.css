@@ -1,0 +1,141 @@
+.Idea {
+    position: relative;
+    overflow: hidden;
+}
+
+.ConteinerDivIdea {
+    min-height: 100vh;
+    background-image: url(img/bg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    padding: clamp(20px, 5vw, 80px);
+    flex-wrap: wrap; /* 🔥 essencial */
+}
+
+/* BLOCO IMAGEM */
+.IdeaLeft {
+    position: relative;
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* IMAGEM */
+.TattooImg {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 550px;
+    display: block;
+}
+
+/* LOGO (agora posicionada corretamente) */
+.LogoImg {
+    width: clamp(70px, 8vw, 100px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+/* TEXTO */
+.IdeaDivRight {
+    flex: 1 1 400px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.IdeaDivRight h1 {
+    font-family: "Anton SC", sans-serif;
+    color: white;
+    font-size: clamp(2.2rem, 5vw, 5em);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.IdeaDivRight span {
+    color: var(--vermelho);
+}
+
+.IdeaDivRight h3 {
+    font-size: clamp(16px, 2.5vw, 25px);
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--vermelho);
+    font-style: italic;
+    font-weight: 200;
+}
+
+.IdeaDivRight p {
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 1024px) {
+    .ConteinerDivIdea {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .IdeaDivRight {
+        align-items: center;
+    }
+
+    .IdeaLeft {
+        width: 100%;
+    }
+
+    .LogoImg {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+    .ConteinerDivIdea {
+        gap: 40px;
+    }
+
+    .IdeaDivRight h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================= */
+/* 📱 MOBILE PEQUENO */
+/* ========================= */
+@media (max-width: 480px) {
+    .IdeaDivRight h1 {
+        font-size: 1.8rem;
+    }
+
+    .IdeaDivRight h3 {
+        font-size: 15px;
+    }
+
+    .IdeaDivRight p {
+        font-size: 13px;
+    }
+
+    .LogoImg {
+        width: 60px;
+    }
+}

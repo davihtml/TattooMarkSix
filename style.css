@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    min-height: 100vh;
+    background-color: black;
+}
+
+:root{
+    --vermelho: #FF0000;
+    --background: url(img/bg1.png)
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(60px);
+    filter: blur(10px);
+
+    transition: 
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+/* quando aparece */
+.fade-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
