@@ -41,14 +41,9 @@ sections.forEach(section => {
 });
 
 
-
-
-
-
-
 function Insta(){
   window.open('https://instagram.com/japatattoo.pb')
 }
 function Whats(){
-  window.open('https://wa.me/4699133452/')
+  window.open('https://wa.me/46991334525/')
 }
